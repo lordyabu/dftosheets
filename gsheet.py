@@ -1,4 +1,4 @@
-
+import time
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from gspread_formatting import *
@@ -61,5 +61,8 @@ def create_multiple_sheets(rules_codes, directory_path, delete_current, grid_ran
                 rules.append(r)
 
             rules.save()
+
+            # Prevent API rate limit
+            time.sleep(2)
 
 
