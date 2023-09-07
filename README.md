@@ -46,11 +46,13 @@ set sheet_name to your sheet name, and add any rules you want. for more info on 
 
 ## 3. Run 
 go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
+
 ```python
   rules_codes = ['z', '1']
 
-  create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
-  create_multiple_sheets(rules_codes=rules_codes, directory_path='./files/example_multiple', delete_current=True, grid_range='1:400')
+create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
+create_multiple_sheets(rules_codes=rules_codes, directory_path='src/files/example_multiple', delete_current=True,
+                       grid_range='1:400')
 ```
 
 # 4. Results
