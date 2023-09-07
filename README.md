@@ -19,8 +19,7 @@ cd dftosheets
 
 ## 1. put csv files you would like to use in ./files. It works for both single/multiple files
  
-## 2. configure.py set sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to: 
-## https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#ConditionalFormatRule
+## 2. configure.py set sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to:  https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#ConditionalFormatRule
 ```python
   sheet_name = "test1.0"
   rule_templates = {
@@ -42,10 +41,8 @@ cd dftosheets
         }
 ```
 
-3. 
-## Run
-## go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2
-## Then either run single/multiple sheets
+
+## 3. Run go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
 ```python
   rules_codes = ['z', '1']
 
