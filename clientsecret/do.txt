@@ -1,0 +1,5 @@
+"""
+Paste client_secret.json in this directory
+
+For more info on this go to https://docs.gspread.org/en/latest/oauth2.html
+"""
