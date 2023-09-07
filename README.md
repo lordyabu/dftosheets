@@ -17,12 +17,11 @@ cd dftosheets
 
 # How to use
 
-1. put csv files you would like to use in ./files. It works for both single/multiple files
-
-2. 
-## configure.py set sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to: 
+## 1. put csv files you would like to use in ./files. It works for both single/multiple files
+ 
+## 2. configure.py set sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to: 
 ## https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#ConditionalFormatRule
-'''python
+```python
   sheet_name = "test1.0"
   rule_templates = {
         "0": [
@@ -37,18 +36,19 @@ cd dftosheets
                 minpoint=InterpolationPoint(color=Color(200, 200, 200), type='MIN')
              ))
         ]
-        ## ADD YOUR RULES HERE
+
+        //  ADD YOUR RULES HERE
 
         }
-'''
+```
 
 3. 
 ## Run
 ## go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2
-# Then either run single/multiple sheets
-'''python
+## Then either run single/multiple sheets
+```python
   rules_codes = ['z', '1']
 
-   # create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
-   # create_multiple_sheets(rules_codes=rules_codes, directory_path='./files/example_multiple', delete_current=True, grid_range='1:400')
-'''
+   create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
+   create_multiple_sheets(rules_codes=rules_codes, directory_path='./files/example_multiple', delete_current=True, grid_range='1:400')
+```
