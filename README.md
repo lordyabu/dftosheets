@@ -17,7 +17,7 @@ cd dftosheets
 
 # How to use
 
-## 1. 
+## 1. upload files
 put csv files you would like to use in ./files. It works for both single/multiple files
  
 ## 2. configure.py 
