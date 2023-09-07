@@ -20,7 +20,7 @@ cd dftosheets
 ## 1. upload files
 put csv files you would like to use in ./files. It works for both single/multiple files
  
-## 2. configure.py 
+## 2. configure
 set sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to:  https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#ConditionalFormatRule
 ```python
   sheet_name = "test1.0"
