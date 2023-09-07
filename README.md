@@ -52,3 +52,7 @@ go to main.py and set 1 rule code for each column. If columns are [DateTime, Pri
   create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
   create_multiple_sheets(rules_codes=rules_codes, directory_path='./files/example_multiple', delete_current=True, grid_range='1:400')
 ```
+
+# 4. Results
+if you run the example data on multiple sheets the sheet should look like this
+![Screenshot (39)](https://github.com/lordyabu/dftosheets/assets/92772420/225075a2-2069-40d1-b5c9-55e1b74d6d13)
