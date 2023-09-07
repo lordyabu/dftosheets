@@ -9,7 +9,7 @@ def delete_days():
              "https://www.googleapis.com/auth/drive"]
 
     creds = ServiceAccountCredentials.from_json_keyfile_name(
-        './clientsecret/client_secret.json', scope)
+        'src/clientsecret/client_secret.json', scope)
 
     client = gspread.authorize(creds)
 

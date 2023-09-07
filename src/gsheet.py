@@ -1,4 +1,3 @@
-
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from gspread_formatting import *
@@ -15,7 +14,7 @@ def create_single_sheet(rules_codes, csv, delete_current, grid_range):
     scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file",
              "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name(
-        './clientsecret/client_secret.json', scope)
+        'src/clientsecret/client_secret.json', scope)
     client = gspread.authorize(creds)
 
     df = read_file(csv)
@@ -39,7 +38,7 @@ def create_multiple_sheets(rules_codes, directory_path, delete_current, grid_ran
     scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file",
              "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name(
-        './clientsecret/client_secret.json', scope)
+        'src/clientsecret/client_secret.json', scope)
     client = gspread.authorize(creds)
 
     spreadsheet = client.open(sheet_name)
