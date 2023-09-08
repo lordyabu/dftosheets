@@ -18,10 +18,11 @@ cd dftosheets
 # How to use
 
 ## 1. upload files
-put csv files you would like to use in ./files. It works for both single/multiple files
+Put csv files you would like to use in ./files. It works for both single/multiple files.
+Also make sure to put your client_secret.json file in clientsecret folder.
  
-## 2. configure
-set sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to:  https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#ConditionalFormatRule
+## 2. Configure
+In config.py, put sheet_name to your sheet name, and add any rules you want. for more info on how to make rules go to:  https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/sheets#ConditionalFormatRule
 ```python
   sheet_name = "test1.0"
   rule_templates = {
@@ -45,10 +46,10 @@ set sheet_name to your sheet name, and add any rules you want. for more info on 
 
 
 ## 3. Run 
-go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
+Go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
 
 ```python
-rules_codes = ['z', '1']
+rules_codes = ['z', '1'] // CODES FROM ABOVE(using 'z' for no formatting)
 
 create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
 create_multiple_sheets(rules_codes=rules_codes, directory_path='src/files/example_multiple', delete_current=True,
@@ -56,5 +57,5 @@ create_multiple_sheets(rules_codes=rules_codes, directory_path='src/files/exampl
 ```
 
 # 4. Results
-if you run the example data on multiple sheets the sheet should look like this
+If you run the example data on multiple sheets the sheet should look like this
 ![Screenshot (39)](https://github.com/lordyabu/dftosheets/assets/92772420/225075a2-2069-40d1-b5c9-55e1b74d6d13)
