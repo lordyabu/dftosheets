@@ -1,5 +1,5 @@
 # dftosheets
-Connect pandas DF to google sheets with conditional formatting
+Automating Google Sheets creation/formatting with python
 
 ## Installation
 ```python
