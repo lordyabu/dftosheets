@@ -8,15 +8,17 @@ def create_formatting(rules, sheet, grid_range='1:400'):
     for count, rule_x in enumerate(rules):
         if rule_x in rule_templates:
             for rule_detail in rule_templates[rule_x]:
+                range_start, range_end = grid_range.split(':')
+                formatted_range = f'{letters[count]}{range_start}:{letters[count]}{range_end}'
                 if rule_detail[0] == 'gradient':
                     rule = ConditionalFormatRule(
-                        ranges=[GridRange.from_a1_range(f'{letters[count]}{grid_range}', sheet)],
+                        ranges=[GridRange.from_a1_range(formatted_range, sheet)],
                         gradientRule=rule_detail[1]
                     )
                 elif rule_detail[0] == 'boolean':
                     condition_type, condition_value, color = rule_detail[1:]
                     rule = ConditionalFormatRule(
-                        ranges=[GridRange.from_a1_range(f'{letters[count]}{grid_range}', sheet)],
+                        ranges=[GridRange.from_a1_range(formatted_range, sheet)],
                         booleanRule=BooleanRule(
                             condition=BooleanCondition(condition_type, [condition_value]),
                             format=CellFormat(backgroundColor=color)
