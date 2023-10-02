@@ -46,6 +46,7 @@ def create_multiple_sheets(rules_codes, directory_path, delete_current, grid_ran
 
     for csv in os.listdir(directory_path):
         if csv.endswith('.csv'):  # Assuming you are reading CSV files
+
             file_path = os.path.join(directory_path, csv)
             df = read_file(file_path)
 
@@ -63,6 +64,6 @@ def create_multiple_sheets(rules_codes, directory_path, delete_current, grid_ran
             rules.save()
 
             # Prevent API rate limit
-            time.sleep(2)
+            time.sleep(3)
 
 
