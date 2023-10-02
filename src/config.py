@@ -6,7 +6,7 @@ from gspread_formatting import *
 
 
 # Sheet name to copy to // make sure to share with your service account
-sheet_name = "test1.0"
+sheet_name = "ExampleSheet"
 
 
 
@@ -33,7 +33,24 @@ rule_templates = {
                 midpoint=InterpolationPoint(color=Color(75, 75, 75), type='PERCENTILE', value="50"),
                 minpoint=InterpolationPoint(color=Color(200, 200, 200), type='MIN')
              ))
-        ]
+        ],
+        "2": [
+            ('gradient',
+             GradientRule(
+                maxpoint=InterpolationPoint(color=Color(0, 100, 0), type='MAX'),
+                midpoint=InterpolationPoint(color=Color(1, 1, 1), type='PERCENTILE', value="50"),
+                minpoint=InterpolationPoint(color=Color(100, 0, 0), type='MIN')
+             ))
+        ],
+        "3": [
+            ('boolean', 'NUMBER_EQ', '5', Color(100, 50, 0)),
+            ('boolean', 'NUMBER_EQ', '7', Color(0, 100, 50)),
+            ('boolean', 'NUMBER_EQ', '-2', Color(0, 100, 100)),
+            ('boolean', 'NUMBER_EQ', '-1', Color(50, 100, 0)),
+            ('boolean', 'NUMBER_EQ', '1', Color(100, 0, 50)),
+            ('boolean', 'NUMBER_EQ', '2', Color(0, 50, 100))
+        ],
+
         ## ADD YOUR RULES HERE
 
         }
