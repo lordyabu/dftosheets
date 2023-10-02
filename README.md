@@ -6,7 +6,7 @@ https://github.com/lordyabu/dftosheets/assets/92772420/6a5b7279-68a2-4f6d-ae2f-a
 ## Installation
 ```python
 git clone https://github.com/lordyabu/dftosheets.git
-cd dftosheets
+cd dftosheets/src
 ```
 
 ## Requirements
