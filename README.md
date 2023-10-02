@@ -47,17 +47,23 @@ In config.py, put sheet_name to your sheet name, and add any rules you want. for
 ```
 
 
-## 3. Run 
-Go to main.py and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
+## 3. Run (Either)
+
+# 1 command line
+```python
+python main.py --multiple-sheet --rule-codes 1 1 2 3 --directory example_multiple
+python main.py --single-sheet --rule-codes 1 1 2 3 --csv PriceDay
+```
+# or 2 
+Go to main.py(main_manual function) and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
 
 ```python
-rules_codes = ['z', '1'] // CODES FROM ABOVE(using 'z' for no formatting)
+rules_codes = ['z', '1' ,'2', '3'] // CODES FROM ABOVE(using 'z' for no formatting)
 
 create_single_sheet(rules_codes=rules_codes, csv='./files/PriceDay.csv', delete_current=True, grid_range='1:400')
 create_multiple_sheets(rules_codes=rules_codes, directory_path='src/files/example_multiple', delete_current=True,
                        grid_range='1:400')
 ```
 
-# 4. Results
-If you run the example data on multiple sheets the sheet should look like this
-![Screenshot (39)](https://github.com/lordyabu/dftosheets/assets/92772420/225075a2-2069-40d1-b5c9-55e1b74d6d13)
+## 4. Results
+If you run the example data on multiple sheets the sheet should look like the video up-top
