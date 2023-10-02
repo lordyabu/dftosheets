@@ -47,14 +47,14 @@ In config.py, put sheet_name to your sheet name, and add any rules you want. for
 ```
 
 
-## 3. Run (Either)
+# 3. Run (Either)
 
-# 1 command line
+## 1 command line
 ```python
 python main.py --multiple-sheet --rule-codes 1 1 2 3 --directory example_multiple
 python main.py --single-sheet --rule-codes 1 1 2 3 --csv PriceDay
 ```
-# or 2 
+## or 2 
 Go to main.py(main_manual function) and set 1 rule code for each column. If columns are [DateTime, Price], len(rule_codes) == 2 Then either run single/multiple sheets
 
 ```python
